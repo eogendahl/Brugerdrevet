@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min opgang</title>
+  <link rel="stylesheet" href="minopgang.css">
+</head>
+<body>
+
+  <div class="side_mobil">
+
+    <!-- TOP -->
+    <div class="top">
+      <h1>Min opgang 🏠</h1>
+      <div class="sprog">🇩🇰</div>
+    </div>
+
+    <!-- BESKED 1 -->
+    <div class="kort besked-kort">
+      <div class="besked-top">
+        <div class="besked-afsender">
+          <img class="profil-img" src="bolig.jpeg" alt="Boligforeningen">
+          <span class="navn">Boligforeningen</span>
+        </div>
+        <span class="tid">00.00</span>
+      </div>
+
+      <p class="besked-tekst">
+        I har fået nye naboer i opgangen🏘. <br><br>
+
+        Omar, Fadumo og deres 2 børn Ibrahim og Nura flytter ind i st. th.<br><br>
+
+        Byd dem velkommen 💌
+      </p>
+
+
+    </div>
+
+    <!-- BESKED 2 -->
+    <div class="kort besked-kort">
+      <div class="besked-top">
+        <div class="besked-afsender">
+          <img class="profil-img" src="laila.png" alt="Laila Nicolaisen, 1. th">
+          <span class="navn">Laila Nicolaisen, 1. th</span>
+        </div>
+        <span class="tid">13.02</span>
+      </div>
+
+      <p class="besked-tekst">
+        Isabella og jeg går på legepladsen nu, hvis I vil med 😊
+        Vi er der nok til kl. 14.
+      </p>
+
+      <div class="deltagere" id="faellesspisning-deltagere">
+
+      </div>
+
+      <p class="antal" id="faellesspisning-antal"> 👥 0 beboere kommer</p>
+
+      <div class="knapper">
+        <button class="primar">Deltag</button>
+      </div>
+
+    </div>
+
+    <!-- OPRET BESKED -->
+    <div class="kort2">
+      <h3>💬 Husk din opgang</h3>
+      <p>Skriv en besked til din opgang</p>
+
+      <input type="text" placeholder="Titel..." class="inputfelt">
+      <textarea placeholder="Skriv besked..." class="inputfelt stor"></textarea>
+
+      <button class="primar">Send besked</button>
+    </div>
+
+    <!-- LINK TIL AKTIVITETER -->
+    <div class="kort">
+      <p><b>✨ Husk følelsen bagefter</b></p>
+      <p>Deltag i aktivitet her 👇</p>
+
+      <a href="aktivitet.html" class="nydeltag">Deltag i aktivitet</a>
+    </div>
+
+  </div>
+
+  <!-- BUND MENU -->
+  <div class="bund-menu">
+    <a href="opgang.html" class="menu-item active">
+      <span>🏠</span>
+      <p>Min opgang</p>
+    </a>
+
+    <a href="aktivitet.html" class="menu-item">
+      <span>📅</span>
+      <p>Aktiviteter</p>
+    </a>
+
+    <a href="besked.html" class="menu-item">
+      <span>💬</span>
+      <p>Beskeder</p>
+    </a>
+
+    <div class="menu-item">
+      <span>👤</span>
+      <p>Profil</p>
+    </div>
+  </div>
+
+  <script src="minopgang.js"></script>
+</body>
+</html>

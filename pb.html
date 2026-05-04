@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Besked fra Fadumo</title>
+  <link rel="stylesheet" href="pb.css" />
+</head>
+<body>
+
+  <div class="side_mobil">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <a href="besked.html" class="back-knap">←</a>
+      <div class="kontakt-info">
+        <div class="profil-billede">F</div>
+        <div>
+          <h1>Fadumo</h1>
+          <p>Online for nylig</p>
+        </div>
+      </div>
+        <button class="ring-knap">📞</button>
+    </header>
+
+    <!-- Chat område -->
+    <main class="chat-container">
+
+      <div class="dato-label">I dag</div>
+
+    
+
+      <div class="besked modtaget invitation">
+        <h3>Fadumo inviterer dig til at deltage i Træk Vejret i Røde Kors</h3>
+        <p><strong>🕒:</strong> Torsdag kl. 16.30–18.00</p>
+        <p><strong>📍:</strong> Edwin Rahrs Vej 32P, 8220 Brabrand</p>
+        <p>
+          Det er en rolig aktivitet med fokus på vejrtrækning, fællesskab og velvære.
+        </p>
+
+        <div class="knap-række">
+          <button class="action-knap accepter" id="acceptBtn" onclick="acceptInvite()">
+            Accepter
+          </button>
+          <button class="action-knap afvis" id="declineBtn" onclick="declineInvite()">
+            Afvis
+          </button>
+        </div>
+      </div>
+
+      <div class="besked system-besked" id="standardBesked">
+        <p>
+          Du kan skrive videre med Fadumo og aftale følgeskab, transport 🚶‍♀️🚌 og få styr på de sidste detaljer. <br>
+          Hun glæder sig til at høre fra dig 😊💬
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Skriv besked -->
+    <div class="skriv-felt">
+      <input type="text" placeholder="Skriv en besked til Fadumo..." />
+      <button>Send</button>
+    </div>
+
+    <!-- Bund menu -->
+    <div class="bund-menu">
+      <a href="minopgang.html" class="menu-item">
+        <span>🏠</span>
+        <p>Min opgang</p>
+      </a>
+
+      <a href="aktivitet.html" class="menu-item">
+        <span>📅</span>
+        <p>Aktiviteter</p>
+      </a>
+
+      <a href="besked.html" class="menu-item active">
+        <span>💬</span>
+        <p>Beskeder</p>
+      </a>
+
+      <a href="#" class="menu-item">
+      <span>👤</span>
+      <p>Profil</p>
+    </a>
+    </div>
+
+  </div>
+
+  <script>
+    function acceptInvite() {
+      const acceptBtn = document.getElementById("acceptBtn");
+      const declineBtn = document.getElementById("declineBtn");
+
+      acceptBtn.innerHTML = "✔ Accepteret";
+      acceptBtn.classList.add("accepted");
+      acceptBtn.disabled = true;
+
+      declineBtn.disabled = true;
+      declineBtn.classList.add("disabled");
+
+      const besked = document.getElementById("standardBesked");
+      besked.style.display = "block";
+    }
+
+    function declineInvite() {
+      const acceptBtn = document.getElementById("acceptBtn");
+      const declineBtn = document.getElementById("declineBtn");
+
+      declineBtn.innerHTML = "Afvist";
+      declineBtn.classList.add("declined");
+      declineBtn.disabled = true;
+
+      acceptBtn.disabled = true;
+      acceptBtn.classList.add("disabled");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* Baggrund på hele siden */
+body {
+  background-color: #f4f7f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Mobilvisning / app-container */
+.side_mobil {
+  max-width: 390px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 30px;
+  padding: 20px;
+  padding-bottom: 100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Overskrift */
+h1 {
+  font-size: 24px;
+  color: #1c2b59;
+  margin-bottom: 8px;
+}
+
+.undertekst {
+  font-size: 14px;
+  color: #5f6b5f;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+/* Søgefelt */
+.soeg-wrap {
+  margin-bottom: 20px;
+}
+
+.soeg-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 18px;
+  border: 1px solid #d5dfd5;
+  font-size: 14px;
+  outline: none;
+  background: #f8faf8;
+}
+
+.soeg-input:focus {
+  border-color: #1c2b59;
+  background: white;
+}
+
+/* Liste med samtaler */
+.samtale-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Hvert beskedkort */
+.samtale-kort {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: white;
+  border: 2px solid #d5dfd5;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.samtale-kort:hover {
+  background: #f8fafc;
+}
+
+/* Ulæst besked */
+.samtale-kort.ulæst {
+  border-color: #1c2b59;
+  background: #eef3fb;
+}
+
+/* Profilbillede */
+.profil-img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #091539;
+}
+
+/* Initialer hvis der ikke er billede */
+.profil-initialer {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #3e496b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  flex-shrink: 0;
+  border: 2px solid #091539;
+}
+
+/* Indhold i samtalen */
+.samtale-indhold {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Toplinje med navn og tid */
+.samtale-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.samtale-top h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #1c2b59;
+}
+
+.tid {
+  font-size: 12px;
+  color: #5f6b5f;
+  white-space: nowrap;
+}
+
+/* Forhåndsvisning */
+.preview {
+  margin: 0;
+  font-size: 14px;
+  color: #5f6b5f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bundmenu */
+.bund-menu {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Hvert menupunkt */
+.menu-item {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  text-decoration: none;
+}
+
+.menu-item span {
+  font-size: 20px;
+}
+
+/* Aktivt menupunkt */
+.menu-item.active {
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: #1c2b59;
+  font-weight: bold;
+}
+
+.menu-item.active span {
+  display: block;
+}

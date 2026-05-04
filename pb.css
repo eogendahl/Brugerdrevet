@@ -1,0 +1,270 @@
+/* Hele siden */
+body {
+  background-color: #f4f7f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobil container */
+.side_mobil {
+  max-width: 390px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #d5dfd5;
+  background: white;
+}
+
+.back-knap {
+  text-decoration: none;
+  color: #1c2b59;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.kontakt-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profil-billede {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1c2b59;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.kontakt-info h1 {
+  font-size: 18px;
+  color: #1c2b59;
+  margin: 0;
+}
+
+.kontakt-info p {
+  font-size: 12px;
+  color: #5f6b5f;
+  margin: 0;
+}
+
+.ring-knap {
+  margin-left: auto; /* skubber den helt til højre */
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  border: none;
+  background: #e6edf7; 
+
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+/* Hover effekt */
+.ring-knap:hover {
+  background: #6f8f44;
+  transform: scale(1.05);
+}
+
+/* Klik effekt */
+.ring-knap:active {
+  transform: scale(0.92);
+}
+
+/* Chat */
+.chat-container {
+  flex: 1;
+  padding: 16px;
+  padding-bottom: 140px;
+  background: #f4f7f4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Dato */
+.dato-label {
+  background: #1c2b59;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  align-self: center;
+}
+
+/* Beskeder */
+.besked {
+  max-width: 80%;
+  padding: 12px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Modtaget */
+.modtaget {
+  background: white;
+  border: 2px solid #d5dfd5;
+  color: #1c2b59;
+}
+
+/* Invitation */
+.invitation {
+  background: #e6edf7;
+  border-left: 6px solid #1c2b59;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.invitation h3 {
+  margin: 0 0 8px;
+  color: #1c2b59;
+}
+
+.invitation p {
+  margin: 4px 0;
+  color: #5f6b5f;
+}
+
+/* System besked */
+.system-besked {
+  background: white;
+  border: 2px solid #d5dfd5;
+  font-size: 13px;
+  color: #1c2b59;
+  max-width: 100%;
+}
+
+/* Knapper */
+.knap-række {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.action-knap {
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.accepter {
+  background: #1c2b59;
+  color: white;
+}
+
+.afvis {
+  background: transparent;
+  border: 2px solid #1c2b59;
+  color: #1c2b59;
+}
+
+.accepted {
+  background: #779d44 !important;
+  color: white !important;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+/* Input felt */
+.skriv-felt {
+  position: absolute;
+  left: 0;
+  bottom: 66px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: white;
+  border-top: 1px solid #d5dfd5;
+  box-sizing: border-box;
+}
+
+.skriv-felt input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid #d5dfd5;
+  box-sizing: border-box;
+}
+
+.skriv-felt button {
+  background: #1c2b59;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0 16px;
+}
+
+/* Bundmenu */
+.bund-menu {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background: white;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* Menu item */
+.menu-item {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  text-decoration: none;
+}
+
+.menu-item span {
+  font-size: 20px;
+  display: block;
+}
+
+.menu-item p {
+  margin: 4px 0 0;
+}
+
+/* Aktiv */
+.menu-item.active {
+  color: #1c2b59;
+  font-weight: bold;
+}
+
+#standardBesked {
+  display: none;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aktiviteter</title>
+  <link rel="stylesheet" href="aktivitet.css">
+</head>
+<body>
+
+  <!-- Mobilside med hele indholdet -->
+  <div class="side_mobil">
+
+    <!-- Topsektion med velkomst og tilmeldt aktivitet -->
+    <div class="top">
+
+    <div class="top-header">
+     <h1>Hej Dalia Aziz fra 2. tv. 👋</h1>
+        <div class="sprog">🇩🇰</div>
+     </div>
+
+      <div class="tilmeldt-box">
+        <h2>Disse aktiviteter er du tilmeldt</h2>
+        <p>Her kan du se dine kommende aktiviteter og notifikationer.</p>
+
+        <!-- Her kommer aktiviteter ind -->
+        <div id="tilmeldte-aktiviteter">
+          <div id="faellesspisning-info" class="skjult">
+            <h4>🍽️ Fællesspisning i Røde Kors</h4>
+            <p>🕒 I dag kl. 18.00</p>
+            <p>📍 Edwin Rahrs Vej 32P, 8220 Brabrand</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Første aktivitetskort -->
+    <div class="kort">
+      <div class="label">📅 I dag 15/4/2026</div>
+
+      <h3>🍽️ Fællesspisning i Røde Kors</h3>
+
+      <div class="detaljer">🕒 Kl. 18.00</div>
+      <div class="detaljer">📍 Edwin Rahrs Vej 32P, 8220 Brabrand</div>
+       <button class="laes-mere-btn open-laes-mere-popup">  Læs mere her → </button>
+
+      <!-- Deltagere til aktiviteten -->
+      <div class="deltagere" id="faellesspisning-deltagere">
+        <img class="voksen" src="omar.png" alt="Profilbillede af Omar Mohamed, st. th">
+        <img class="voksen" src="fadumo.png" alt="Profilbillede af Fadumo Mohamed, st. th">
+        <span class="barn">IM</span>
+        <span class="barn">NM</span>
+        <img class="voksen" src="laila.png" alt="Profilbillede af Laila Nicolaisen, 1. th">
+      </div>
+
+      <p class="antal" id="faellesspisning-antal">👥 5 beboere kommer</p>
+
+      <!-- Knapper til aktivitet -->
+      <div class="knapper">
+        <button class="primar">Deltag</button>
+        <button class="sekundar open-popup">📩 Inviter</button>
+        <button class="foelges-btn open-foelges-popup">🚶 Find følgeskab</button>
+      </div>
+    </div>
+
+    <!-- Andet aktivitetskort -->
+    <div class="kort">
+      <div class="label">📅 I morgen 16/4/2026</div>
+
+      <h3>📚 Højtlæsning på Gellerup bibliotek</h3>
+
+      <div class="detaljer">🕒 Kl. 15.00</div>
+      <div class="detaljer">📍 Karens Blixens Boulevard 23, 8220 Brabrand</div>
+
+      <!-- Deltagere til aktiviteten -->
+      <div class="deltagere">
+        <img class="voksen" src="fatma.png" alt="Profilbillede af Fatma Jama, st. tv">
+        <span class="barn">AJ</span>
+        <span class="voksen">YK</span>
+        <span class="barn">AK</span>
+        <span class="barn">NK</span>
+      </div>
+
+      <p class="antal">👥 5 beboere kommer</p>
+
+      <!-- Knapper til aktivitet -->
+      <div class="knapper">
+        <button class="primar">Deltag</button>
+        <button class="sekundar">📩 Inviter</button>
+        <button class="foelges-btn">🚶 Find følgeskab</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Popup til invitation af beboere -->
+  <div class="popup-overlay" id="invitePopup">
+    <div class="popup">
+      <h2>Inviter beboere</h2>
+      <p>Vælg de beboere du gerne vil invitere til aktiviteten.</p>
+
+      <div class="beboer-liste">
+        <label class="beboer allerede-med">
+          <input type="checkbox" value="Omar Mohamed, st. th" checked disabled>
+          <img class="avatar" src="omar.png" alt="Omar Mohamed, st. th">
+          <span>Omar Mohamed, st. th (deltager)</span>
+        </label>
+
+        <label class="beboer allerede-med">
+          <input type="checkbox" value="Fadumo Mohamed, st. th" checked disabled>
+          <img class="avatar" src="fadumo.png" alt="Fadumo Mohamed, st. th">
+          <span>Fadumo Mohamed, st. th (deltager)</span>
+        </label>
+
+        <label class="beboer allerede-med">
+          <input type="checkbox" value="Ibrahim Mohamed, st. th" checked disabled>
+          <div class="avatar barn-avatar">IM</div>
+          <span>Ibrahim Mohamed, st. th (deltager)</span>
+        </label>
+
+        <label class="beboer allerede-med">
+          <input type="checkbox" value="Nura Mohamed, st. th" checked disabled>
+          <div class="avatar barn-avatar">NM</div>
+          <span>Nura Mohamed, st. th (deltager)</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Fatma Jama, st. tv">
+          <img class="avatar" src="fatma.png" alt="Fatma Jama, st. tv">
+          <span>Fatma Jama, st. tv</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Abdi Jama, st. tv">
+          <div class="avatar voksen-avatar">AJ</div>
+          <span>Abdi Jama, st. tv</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Ali Jama, st. tv">
+          <div class="avatar barn-avatar">AJ</div>
+          <span>Ali Jama, st. tv</span>
+        </label>
+
+        <label class="beboer allerede-med">
+          <input type="checkbox" value="Laila Nicolaisen, 1. th" checked disabled>
+          <img class="avatar" src="laila.png" alt="Laila Nicolaisen, 1. th">
+          <span>Laila Nicolaisen, 1. th (deltager)</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Isabella Nicolaisen, 1. th">
+          <div class="avatar barn-avatar">IN</div>
+          <span>Isabella Nicolaisen, 1. th</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Bilal Karim, 1. tv">
+          <div class="avatar voksen-avatar">BK</div>
+          <span>Bilal Karim, 1. tv</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Yasmin Karim, 1. tv">
+          <div class="avatar voksen-avatar">YK</div>
+          <span>Yasmin Karim, 1. tv</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Aisha Karim, 1. tv">
+          <div class="avatar barn-avatar">AK</div>
+          <span>Aisha Karim, 1. tv</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Noor Karim, 1. tv">
+          <div class="avatar barn-avatar">NK</div>
+          <span>Noor Karim, 1. tv</span>
+        </label>
+
+        <label class="beboer allerede-med">
+          <input type="checkbox" value="Hani Warsame, 2. th" checked disabled>
+          <img class="avatar" src="Hani.png" alt="Hani Warsame, 2. th">
+          <span>Hani Warsame, 2. th (deltager)</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Said Warsame, 2. th">
+          <div class="avatar barn-avatar">SW</div>
+          <span>Said Warsame, 2. th</span>
+        </label>
+
+        <label class="beboer allerede-med">
+          <input type="checkbox" value="Ahmed Warsame, 2. th" checked disabled>
+          <img class="avatar" src="ahmed.png" alt="Ahmed Warsame, 2. th">
+          <span>Ahmed Warsame, 2. th (deltager)</span>
+        </label>
+      </div>
+
+      <div class="popup-knapper">
+        <button class="luk-btn" id="closePopup">Luk</button>
+        <button class="send-btn" id="sendInvite">Send invitation</button>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+    </div>
+  </div>
+
+  <!-- Popup til at finde følgeskab -->
+  <div class="popup-overlay" id="foelgesPopup">
+    <div class="popup">
+      <h2>Find følgeskab</h2>
+      <p>Vælg de beboere der allerede deltager og som du vil spørge om de vil følges.</p>
+
+      <div class="beboer-liste">
+        <label class="beboer">
+          <input type="checkbox" value="Omar Mohamed, st. th">
+          <img class="avatar" src="omar.png" alt="Omar Mohamed, st. th">
+          <span>Omar Mohamed, st. th</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Fadumo Mohamed, st. th">
+          <img class="avatar" src="fadumo.png" alt="Fadumo Mohamed, st. th">
+          <span>Fadumo Mohamed, st. th</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Nura Mohamed, st. th">
+          <div class="avatar barn-avatar">NM</div>
+          <span>Nura Mohamed, st. th</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Ibrahim Mohamed, st. th">
+          <div class="avatar barn-avatar">IM</div>
+          <span>Ibrahim Mohamed, st. th</span>
+        </label>
+
+        <label class="beboer">
+          <input type="checkbox" value="Laila Nicolaisen, 1. th">
+          <img class="avatar" src="laila.png" alt="Laila Nicolaisen, 1. th">
+          <span>Laila Nicolaisen, 1. th</span>
+        </label>
+      </div>
+
+      <div class="popup-knapper">
+        <button class="luk-btn" id="closeFoelgesPopup">Luk</button>
+        <button class="send-btn" id="sendFoelges">Send forespørgsel</button>
+      </div>
+
+      <div class="feedback" id="foelgesFeedback"></div>
+    </div>
+  </div>
+
+  <!-- Popup til læs mere om fællesspisning -->
+<div class="popup-overlay" id="laesMerePopup">
+  <div class="popup">
+    <h2>🍽️ Fællesspisning i Røde Kors</h2>
+
+    <!-- Her kan du selv sætte dit billede ind -->
+    <img class="laes-mere-billede" src="spis.png" alt="Fællesspisning i Røde Kors">
+
+    <p>
+      Hyggelig fællesspisning i varme rammer. Kom alene eller sammen med andre.
+    </p>
+
+    <div class="popup-knapper">
+      <button class="luk-btn" id="closeLaesMerePopup">Luk</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Bundmenu -->
+  <div class="bund-menu">
+    <a href="minopgang.html" class="menu-item">
+      <span>🏠</span>
+      <p>Min opgang</p>
+    </a>
+
+    <a href="aktivitet.html" class="menu-item active">
+      <span>📅</span>
+      <p>Aktiviteter</p>
+    </a>
+
+    <a href="besked.html" class="menu-item">
+      <span>💬</span>
+      <p>Beskeder</p>
+    </a>
+
+    <div class="menu-item">
+      <span>👤</span>
+      <p>Profil</p>
+    </div>
+  </div>
+
+  <script src="aktivitet.js"></script>
+</body>
+</html>
